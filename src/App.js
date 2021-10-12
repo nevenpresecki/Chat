@@ -31,11 +31,15 @@ class App extends React.Component{
         data: this.state.member
       });      
 
-      this.drone.on('open', error => {
+      this.drone.on('open' , error => {
+        const member = {...this.state.member};        
+        member.id = this.drone.clientId;
+        this.setState({member});
+        
         if (error) {
         return console.error(error);
         }
-        return console.log("Connected to room");                               
+        return console.log("Connected to room");
         });         
         
       const room = this.drone.subscribe('observable-room'); 
@@ -44,17 +48,6 @@ class App extends React.Component{
         this.setState({messages: this.state.messages.concat({member, data})});        
         });        
         
-        room.on('members', members => {
-            var me = members.find(member => {
-            return member.id === this.drone.clientId;                                            
-          });      
-          this.setState(prevState => ({
-            member: {
-              ...prevState.member,
-              id: me.id
-            }            
-          }));                           
-        });     
     }    
           
       Send = (Text) =>  {
