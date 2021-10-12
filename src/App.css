@@ -1,38 +1,66 @@
-.App {
-  text-align: center;
+.Chat{
+  width: 1000px;  
+  height: 730px;   
+  margin: auto;    
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.ChatSection{  
+  width: 75%;
+  height: 85%;
+  padding: 10px;
+  border: solid 2px; 
+  margin: auto;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: column;  
+  justify-content:flex-end;
 }
 
-.App-link {
-  color: #61dafb;
+.ChatSection p{  
+  margin: 1px;
+  padding: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ChatSection div{
+  margin: 2px;
+  padding: 0;
 }
+
+.ChatSection p:first-of-type {
+  font-size: 12px;  
+} 
+
+.SendSection{
+  width: 75%;
+  height: 4%;  
+  padding: 10px;
+  border: solid 2px;
+  margin: 1% auto;
+  display: flex;
+  align-items: center;  
+}
+
+.Text{
+  border-color: cornflowerblue;
+  width: 85%;
+  height: 100%;   
+}
+
+.Send{ 
+  border-radius: 10%;
+  background-color: coral;
+  margin: 2%; 
+  width: 10%;
+  height: 100%;   
+}
+
+.myText{  
+  text-align: right;     
+}
+
+.othersText{
+  text-align: left;    
+}
+
+
+
+
